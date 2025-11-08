@@ -1,5 +1,5 @@
 [project]
-name = "Ai assistant using openAI api"
+name = "Ai_assistant_using_openAI_api"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
