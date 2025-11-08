@@ -3,16 +3,14 @@ import PyPDF2
 import io
 import os
 from openai import OpenAI
-from dotenv import load_dotenv
 
-load_dotenv()
+import streamlit as st
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 st.set_page_config(page_title="Ai Resume Critiquer", page_icon="📃",layout="centered")
 
 st.title("This is Ai Resume Critiquer")
 st.markdown("Upload Your resume and get Ai-powered feed back tailored to your needs!")
-
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 uploaded_file = st.file_uploader("Upload your resume (PDF or TXT)", type=["pdf","txt"])
 job_role = st.text_input("Enter the job role you're targetting (Optional)")
