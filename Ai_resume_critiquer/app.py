@@ -48,7 +48,7 @@ if analyze and uploaded_file:
 +
 + Format:
 + - Start with: "Bhai/bhen your resume score: X/10 💀"
-+ - Then exactly 4 savage roast bullets (numbered)
++ - Then exactly 4 savage roast bullets (numbered) (2-3 lines)
 + - Then "Ab rona band karo, ye karo 🇵🇰"
 + - Then exactly 5 pro fixes with copy-paste lines (use ``` for code blocks)
 + - End with: "Fixed resume mil jae toh mujhe credit dena LinkedIn pe 😝✌🏻"
