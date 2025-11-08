@@ -9,7 +9,7 @@ OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 st.set_page_config(page_title="Ai Resume Critiquer/Roaster", page_icon="📃",layout="centered")
 
-st.title("This is Ai Resume Critiquer/Roaster 🥷🏿💔")
+st.title("This is a Ai Resume Critiquer/Roaster 🥷🏿💔")
 st.markdown("Upload Your resume and get a rating/ get roasted!")
 
 uploaded_file = st.file_uploader("Upload your resume (PDF or TXT)", type=["pdf","txt"])
@@ -52,7 +52,7 @@ Format:
 - Then 5 pro fixes with copy-paste lines
 - End with: "Fixed resume mil jae toh mujhe credit dena LinkedIn pe 😝✌🏻"
 
-Tone: Speak like a Lahori friend who got FAANG offer but still abuses in Punjabi-English mix.
+Tone: Speak like a Lahori friend who got FAANG offer but still abuses in Urdu-English mix.
 
 Specific improvments for {job_role if job_role else 'General Job Applications'}
 
