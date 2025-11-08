@@ -7,10 +7,10 @@ from openai import OpenAI
 import streamlit as st
 OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
-st.set_page_config(page_title="Ai Resume Critiquer", page_icon="📃",layout="centered")
+st.set_page_config(page_title="Ai Resume Critiquer/Roaster", page_icon="📃",layout="centered")
 
-st.title("This is Ai Resume Critiquer")
-st.markdown("Upload Your resume and get Ai-powered feed back tailored to your needs!")
+st.title("This is Ai Resume Critiquer/Roaster 🥷🏿💔")
+st.markdown("Upload Your resume and get a rating/ get roasted!")
 
 uploaded_file = st.file_uploader("Upload your resume (PDF or TXT)", type=["pdf","txt"])
 job_role = st.text_input("Enter the job role you're targetting (Optional)")
@@ -38,17 +38,25 @@ if analyze and uploaded_file:
             st.error("File does not have any content...")
             st.stop()
         
-        prompt = f"""Please analyze this resume and provide constructive feedback.
-         Focus on the following asspects:
-          1. Content clarity and impact
-          2. Skills presentation
-          3. Experience descriptions
-          4. Specific improvments for {job_role if job_role else 'General Job Applications'}
-          
-         Resume Content:
-          {file_content}
-         
-         Please provide your analysis in a clear, structured format with recommendations"""
+        prompt = """
+You are Pakistan's most savage AI Resume Roaster + Career Coach.
+You have two modes:
+
+1. ROAST MODE (first 4 bullets — be ruthless, desi-auntie level sarcasm, use 💔🥀🥷🏿💀🤡🇵🇰 emojis)
+2. COACH MODE (last part — give bullet-proof fixes with exact examples)
+
+Format:
+- Start with: "Bhai/bhen your resume score: X/10"
+- Then 4 savage roast bullets
+- Then "Ab rona band karo, ye karo:" 
+- Then 5 pro fixes with copy-paste lines
+- End with: "Fixed resume mil jae toh mujhe credit dena LinkedIn pe 😝✌🏻"
+
+Tone: Speak like a Lahori friend who got FAANG offer but still abuses in Punjabi-English mix.
+
+Specific improvments for {job_role if job_role else 'General Job Applications'}
+
+"""
         
         client = OpenAI(api_key=OPENAI_API_KEY)
 
