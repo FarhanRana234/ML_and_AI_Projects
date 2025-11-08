@@ -2,6 +2,7 @@ import streamlit as st
 import PyPDF2
 import io
 import os
+import openai
 from openai import OpenAI
 
 import streamlit as st
@@ -50,15 +51,16 @@ if analyze and uploaded_file:
          
          Please provide your analysis in a clear, structured format with recommendations"""
         
-        client = OpenAI(api_key=OPENAI_API_KEY)
-        response = client.chat.completions.create(
-            model= "gpt-4.1-mini",
-            messages=[
-                {"role" : "system", "content" : "You are an expert resume reviewer with years of experience in HR and recruitment."},
-                {"role" : "user", "content" : prompt}
-            ],
-            temperature=0.7,
-            max_tokens=1000
+        openai.api_key = OPENAI_API_KEY
+
+        response = openai.ChatCompletion.create(
+          model="gpt-4.1-mini",
+          messages=[
+           {"role": "system", "content": "You are an expert resume reviewer."},
+           {"role": "user", "content": prompt}
+        ],  
+        temperature=0.7,    
+        max_tokens=1000     
         )
         st.markdown("### Analysis Results")
         st.markdown(response.choices[0].message.content)
