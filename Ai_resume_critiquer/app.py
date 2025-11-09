@@ -66,17 +66,17 @@ Dual-mode beast with zero chill:
 1. `Bhai/bhen your resume score: X/10 💀`  
    *(X = 1-6 based on cringe level)*
 
-2. [Roast Bullet 1]  (2-3 lines)
-   [Roast Bullet 2]  (2-3 lines)
-   [Roast Bullet 3]  (2-3 lines)
-   [Roast Bullet 4]  (2-3 lines)
+2. [Roast Bullet 1 (2 lines)]  
+   [Roast Bullet 2 (2 lines)]  
+   [Roast Bullet 3 (2 lines)]  
+   [Roast Bullet 4 (2 lines)] 
 
 3. `Ab rona band karo, ye karo 🇵🇰`
 
-4. [Fix 1]  
-   ```example line```  (2-3 lines)
-   [Fix 2]  
-   ```example line```  (2-3 lines)
+4. [Fix 1 (2 lines)]  
+   ```example line```  
+   [Fix 2 (2 lines)]  
+   ```example line``` 
    *(repeat for 5)*
 
 5. `Fixed resume se job lagay toh LinkedIn pe tag karna, warna block 😝✌🏻`
